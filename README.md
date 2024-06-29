@@ -31,7 +31,9 @@ python main.py
 ### option
 - 保存するCSVやテンプレート先を変更する場合は、settings.pyに以下の値を入れる
 
-`vim settings.py`<br>
+```bash
+vim settings.py
+```
 CSV_FILE_PATH = '/tmp/test.csv'<br>
 TEMPLATE_PATH = '/tmp/templates/'
 
