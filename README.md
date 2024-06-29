@@ -11,10 +11,9 @@ python setup.py develop
 もしくはroboterフォルダーを実行するディレクトリへ置く
 
 ```bash
-ls
+$ ls
+roboter
 ```
-output->roboter
-
 
 ## Requirement
 文字を装飾する目的でtermcolorという外部ライブラリを使用しているため、インストールが必要
@@ -31,10 +30,12 @@ python main.py
 
 ### option
 - 保存するCSVやテンプレート先を変更する場合は、settings.pyに以下の値を入れる
-`vim settings.py`
-CSV_FILE_PATH = '/tmp/test.csv'
+
+`vim settings.py`<br>
+CSV_FILE_PATH = '/tmp/test.csv'<br>
 TEMPLATE_PATH = '/tmp/templates/'
 
 - `settings.py`ファイルを作成した場合は、変更しない場合のDefaultを以下のように設定する
-CSV_FILE_PATH = None
+
+CSV_FILE_PATH = None<br>
 TEMPLATE_PATH = None
