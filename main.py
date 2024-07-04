@@ -1,5 +1,6 @@
-from termcolor import colored
 import csv
+
+from termcolor import colored
 
 import lesson
 
