@@ -28,9 +28,9 @@ while True:
 
                     if yes_or_no in ['yes', 'no', 'y', 'n']:
                         break
-                    else:
-                        print(colored('yesかnoで回答してください。', 'red'))
-                        print(colored('Please answer with yes or no.', 'red'))
+                    
+                    print(colored('yesかnoで回答してください。', 'red'))
+                    print(colored('Please answer with yes or no.', 'red'))
 
                 if yes_or_no in ['yes', 'y']:
                     break
