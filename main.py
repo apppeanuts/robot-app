@@ -6,16 +6,16 @@ import lesson
 
 lesson.greeting()
 
-csv_path = 'ranking.csv'
+CSV_PATH = 'ranking.csv'
 fieldnames = ['NAME', 'COUNT']
 
 
 while True:
     name = input('')
     if name:
-        if lesson.csv_has_data(csv_path):
+        if lesson.csv_has_data(CSV_PATH):
 
-            key_arr = lesson.get_recommend_row(csv_path)
+            key_arr = lesson.get_recommend_row(CSV_PATH)
             for key in key_arr:
                 print(colored('===================================================', 'green'))
                 print(colored(f'私のオススメのレストランは、{key}です。', 'green'))
@@ -43,7 +43,7 @@ while True:
             favorite_restaurant = input('').title()
 
             if favorite_restaurant:
-                lesson.update_restaurant_count(csv_path, favorite_restaurant)
+                lesson.update_restaurant_count(CSV_PATH, favorite_restaurant)
 
                 print(colored('===================================================', 'green'))
                 print(colored(f'{name}さん。ありがとうございました。', 'green'))
@@ -60,7 +60,7 @@ while True:
             favorite_restaurant = input().title()
 
             if favorite_restaurant:
-                with open(csv_path, 'w', newline='') as csv_file:
+                with open(CSV_PATH, 'w', newline='') as csv_file:
                     writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
                     writer.writeheader()
                     writer.writerow({'NAME': favorite_restaurant, 'COUNT': 1})
